@@ -13,8 +13,8 @@ resource "aws_ecs_service" "sales_bot_kongs" {
       aws_security_group.egress_all.id,
     ]
     subnets = [
-      aws_subnet.private_d.id,
-      aws_subnet.private_e.id,
+      aws_subnet.private_a.id,
+      aws_subnet.private_b.id,
     ]
   }
   desired_count = 1
@@ -30,11 +30,11 @@ resource "aws_ecs_task_definition" "sales_bot_kongs" {
   [
     {
       "name": "sales-bot",
-      "image": "<image uri>",
+      "image": "<Image Here>",
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-region": "us-east-1",
+          "awslogs-region": "us-west-1",
           "awslogs-group": "/ecs/sales-bot",
           "awslogs-stream-prefix": "ecs"
         }
