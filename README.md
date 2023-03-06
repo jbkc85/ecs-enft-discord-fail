@@ -26,4 +26,7 @@ Hardcode the `.env` contents into `index.js` so that you have an easier life dep
 
 Build and push the new image to ECR or docker hub.
 
+In `config.tf` you need to fill out two places with your aws profile name.
+In `ecs.tf` you need to specify the image uri to the image you have just built. I use ECR arn uri here.
+
 Now deploy with `terraform apply`. Go to cloudwatch and see that there are no errors, and the bot isn't posting any sales to Discord. Figure out why and fix it.
