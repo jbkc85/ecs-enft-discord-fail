@@ -22,6 +22,8 @@ discord notifications should be coming in with new sales
 
 Make sure you have terraform installed.
 
+Creates a "salesbot" S3 bucket in `us-east-1`.
+
 Hardcode the `.env` contents into `index.js` so that you have an easier life deploying this.
 
 Build and push the new image to ECR or docker hub.
